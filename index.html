@@ -1,1 +1,184 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#080b0a">
+  <meta name="description" content="Portfólio de Igor Pereira de Medeiros — estudante de Ciência da Computação, programação e cibersegurança.">
+  <title>Igor Pereira | Portfólio</title>
+  <style>
+    :root{--bg:#080b0a;--panel:#101613;--line:#24352b;--green:#72ff9b;--muted:#a7b5ab;--white:#edf5ef}
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;background:radial-gradient(ellipse at 80% 0%,#153222 0,transparent 32%),var(--bg);color:var(--white);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.6}
+    a{color:inherit;text-decoration:none}
+    .wrap{width:min(1080px,calc(100% - 40px));margin:auto}
+    header{position:sticky;top:0;z-index:5;background:#080b0ae8;backdrop-filter:blur(12px);border-bottom:1px solid #1c2a21}
+    nav{min-height:72px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+    .brand{font-weight:800;letter-spacing:-.04em;font-size:1.15rem}.brand span{color:var(--green)}
+    .navlinks{display:flex;align-items:center;gap:22px;color:var(--muted);font-size:.92rem}
+    .navlinks a:hover{color:var(--green)}
+    button,.button{border:1px solid #3a6247;background:#14251a;color:var(--green);border-radius:10px;padding:10px 14px;font:inherit;font-weight:700;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;gap:8px}
+    button:hover,.button:hover{background:#1c3525;transform:translateY(-1px)}
+    .hero{padding:100px 0 82px;display:grid;grid-template-columns:1.5fr .8fr;gap:50px;align-items:center;min-height:550px}
+    .eyebrow{display:inline-flex;align-items:center;gap:9px;border:1px solid var(--line);border-radius:99px;padding:6px 12px;color:var(--green);font-size:.82rem}
+    .dot{height:8px;width:8px;background:var(--green);border-radius:50%;box-shadow:0 0 14px var(--green)}
+    h1{font-size:clamp(2.7rem,7vw,5.3rem);line-height:1.03;letter-spacing:-.065em;margin:24px 0}
+    h1 span{color:var(--green)}
+    .lead{max-width:650px;color:var(--muted);font-size:1.1rem}
+    .actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+    .button.secondary{background:transparent;border-color:#33443a;color:var(--white)}
+    .terminal{background:#0c110e;border:1px solid #2a4231;border-radius:18px;box-shadow:0 20px 70px #0008;overflow:hidden;transform:rotate(1deg)}
+    .termbar{padding:13px 16px;border-bottom:1px solid #24352b;display:flex;align-items:center;gap:7px;color:var(--muted);font-size:.82rem}
+    .termbar i{width:9px;height:9px;border-radius:50%;background:#3b5544}
+    .termcontent{padding:24px;font: .91rem/2 ui-monospace,SFMono-Regular,Menlo,monospace;color:var(--muted)}
+    .termcontent .green{color:var(--green)}.termcontent .white{color:var(--white)}
+    section{padding:68px 0;scroll-margin-top:85px}
+    .section-kicker{font: .82rem ui-monospace,monospace;color:var(--green);text-transform:uppercase;letter-spacing:.14em}
+    h2{font-size:clamp(1.9rem,4vw,2.6rem);letter-spacing:-.045em;margin:8px 0 12px}
+    .section-intro{color:var(--muted);max-width:680px;margin:0 0 28px}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    .card{background:linear-gradient(145deg,#111a14,#0c100e);border:1px solid var(--line);border-radius:16px;padding:23px}
+    .card h3{margin:8px 0;font-size:1.12rem}.card p{color:var(--muted);font-size:.94rem}
+    .card-icon{font-size:1.45rem;color:var(--green)}
+    .tags{display:flex;gap:7px;flex-wrap:wrap;margin-top:16px}
+    .tag{font-size:.76rem;border:1px solid #2a4031;color:#b8eac5;border-radius:7px;padding:4px 8px}
+    .project-link{display:inline-block;color:var(--green);font-weight:700;font-size:.9rem;margin-top:10px}
+    .about{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+    .skill-list{display:flex;flex-wrap:wrap;gap:9px}
+    .skill{border:1px solid var(--line);background:#0d130f;padding:10px 13px;border-radius:9px;color:#d8e6db}
+    .contactbox{display:flex;align-items:center;justify-content:space-between;gap:25px;flex-wrap:wrap;background:linear-gradient(120deg,#112719,#0d130f);border:1px solid #31513a;border-radius:18px;padding:30px}
+    footer{border-top:1px solid #1c2a21;padding:25px 0;color:var(--muted);font-size:.86rem}
+    footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+    @media(max-width:760px){.navlinks{gap:12px}.navlinks a:not(:last-child){display:none}.hero{grid-template-columns:1fr;padding:72px 0 48px;gap:34px;min-height:0}.terminal{max-width:500px}.grid{grid-template-columns:1fr}.about{grid-template-columns:1fr}section{padding:52px 0}}
+    @media(min-width:761px) and (max-width:950px){.grid{grid-template-columns:repeat(2,1fr)}}
+  </style>
+</head>
+<body>
+<header>
+  <nav class="wrap" aria-label="Navegação principal">
+    <a class="brand" href="#inicio">igor<span>.</span>dev</a>
+    <div class="navlinks">
+      <a href="#sobre" data-pt="Sobre" data-en="About">Sobre</a>
+      <a href="#habilidades" data-pt="Habilidades" data-en="Skills">Habilidades</a>
+      <a href="#projetos" data-pt="Projetos" data-en="Projects">Projetos</a>
+      <a href="#contato" data-pt="Contato" data-en="Contact">Contato</a>
+      <button id="langBtn" type="button" aria-label="Alternar idioma">EN ↗</button>
+    </div>
+  </nav>
+</header>
 
+<main>
+  <section class="hero wrap" id="inicio">
+    <div>
+      <div class="eyebrow"><span class="dot"></span><span data-pt="Estudante de Ciência da Computação" data-en="Computer Science Student">Estudante de Ciência da Computação</span></div>
+      <h1><span data-pt="Olá, eu sou" data-en="Hey, I'm">Olá, eu sou</span><br>Igor <span>Pereira.</span></h1>
+      <p class="lead" data-pt="Tenho interesse em programação, desenvolvimento backend e cibersegurança. Estou construindo minha base técnica por meio dos estudos e de projetos práticos." data-en="I'm interested in programming, backend development, and cybersecurity. I'm building my technical foundation through learning and hands-on projects.">Tenho interesse em programação, desenvolvimento backend e cibersegurança. Estou construindo minha base técnica por meio dos estudos e de projetos práticos.</p>
+      <div class="actions">
+        <a class="button" href="#projetos" data-pt="Ver meus projetos ↘" data-en="Explore my projects ↘">Ver meus projetos ↘</a>
+        <a class="button secondary" href="#contato" data-pt="Entrar em contato" data-en="Get in touch">Entrar em contato</a>
+      </div>
+    </div>
+    <div class="terminal" aria-label="Janela de terminal decorativa">
+      <div class="termbar"><i></i><i></i><i></i><span style="margin-left:8px">igor@portfolio:~</span></div>
+      <div class="termcontent">
+        <div><span class="green">$</span> whoami</div>
+        <div class="white">Igor Pereira</div>
+        <div><span class="green">$</span> interests --list</div>
+        <div>├─ <span class="white">Cybersecurity</span></div>
+        <div>├─ <span class="white">Backend Development</span></div>
+        <div>└─ <span class="white">Networking</span></div>
+        <div><span class="green">$</span> <span class="white">_</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="sobre">
+    <div class="wrap">
+      <div class="section-kicker" data-pt="01 / Sobre mim" data-en="01 / About me">01 / Sobre mim</div>
+      <h2 data-pt="Aprendendo. Construindo. Evoluindo." data-en="Learning. Building. Improving.">Aprendendo. Construindo. Evoluindo.</h2>
+      <div class="about">
+        <div class="card">
+          <h3 data-pt="Minha jornada" data-en="My journey">Minha jornada</h3>
+          <p data-pt="Sou estudante de Ciência da Computação e estou desenvolvendo minhas habilidades em programação, redes e segurança da informação. Meu objetivo é transformar conhecimento em projetos úteis e continuar evoluindo com prática constante." data-en="I'm a Computer Science student developing my skills in programming, networking, and information security. My goal is to turn knowledge into useful projects and keep improving through consistent practice.">Sou estudante de Ciência da Computação e estou desenvolvendo minhas habilidades em programação, redes e segurança da informação. Meu objetivo é transformar conhecimento em projetos úteis e continuar evoluindo com prática constante.</p>
+        </div>
+        <div class="card">
+          <h3 data-pt="O que busco" data-en="What I'm aiming for">O que busco</h3>
+          <p data-pt="Quero aprofundar meus conhecimentos em backend e cibersegurança, colaborar em projetos reais e conquistar oportunidades para aprender com profissionais da área." data-en="I want to deepen my knowledge of backend development and cybersecurity, contribute to real projects, and find opportunities to learn from professionals.">Quero aprofundar meus conhecimentos em backend e cibersegurança, colaborar em projetos reais e conquistar oportunidades para aprender com profissionais da área.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="habilidades">
+    <div class="wrap">
+      <div class="section-kicker" data-pt="02 / Habilidades" data-en="02 / Skills">02 / Habilidades</div>
+      <h2 data-pt="Tecnologias e áreas de estudo" data-en="Technologies & learning areas">Tecnologias e áreas de estudo</h2>
+      <p class="section-intro" data-pt="Uma lista das tecnologias e fundamentos que estou estudando. Vou atualizar esta seção conforme ganhar experiência." data-en="A list of technologies and fundamentals I'm studying. I'll update this section as I gain experience.">Uma lista das tecnologias e fundamentos que estou estudando. Vou atualizar esta seção conforme ganhar experiência.</p>
+      <div class="skill-list">
+        <span class="skill">Java</span><span class="skill">Python</span><span class="skill">HTML & CSS</span><span class="skill">JavaScript</span><span class="skill">Git & GitHub</span><span class="skill">Linux</span><span class="skill">Redes de computadores</span><span class="skill">Fundamentos de cibersegurança</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="projetos">
+    <div class="wrap">
+      <div class="section-kicker" data-pt="03 / Projetos" data-en="03 / Projects">03 / Projetos</div>
+      <h2 data-pt="Praticando na vida real" data-en="Learning by building">Praticando na vida real</h2>
+      <p class="section-intro" data-pt="Estes cartões são modelos iniciais. Troque os links e as descrições pelos seus repositórios reais quando os projetos estiverem prontos." data-en="These cards are starter examples. Replace the links and descriptions with your real repositories as your projects become ready.">Estes cartões são modelos iniciais. Troque os links e as descrições pelos seus repositórios reais quando os projetos estiverem prontos.</p>
+      <div class="grid">
+        <article class="card">
+          <div class="card-icon">⌘</div>
+          <h3 data-pt="Projetos de programação" data-en="Programming projects">Projetos de programação</h3>
+          <p data-pt="Exercícios e pequenos programas criados durante meus estudos para praticar lógica e fundamentos de desenvolvimento." data-en="Exercises and small programs created while studying to practice logic and development fundamentals.">Exercícios e pequenos programas criados durante meus estudos para praticar lógica e fundamentos de desenvolvimento.</p>
+          <div class="tags"><span class="tag">Java</span><span class="tag">Python</span><span class="tag">Git</span></div>
+          <a class="project-link" href="https://github.com/igorpmcj12-crypto" target="_blank" rel="noopener noreferrer" data-pt="Ver no GitHub ↗" data-en="View on GitHub ↗">Ver no GitHub ↗</a>
+        </article>
+        <article class="card">
+          <div class="card-icon">▣</div>
+          <h3 data-pt="Sistema de estoque" data-en="Inventory system">Sistema de estoque</h3>
+          <p data-pt="Projeto de estudo planejado para organizar produtos e quantidades, com foco em lógica, banco de dados e backend." data-en="A planned learning project to organize products and quantities, focused on logic, databases, and backend development.">Projeto de estudo planejado para organizar produtos e quantidades, com foco em lógica, banco de dados e backend.</p>
+          <div class="tags"><span class="tag">Backend</span><span class="tag">Database</span></div>
+          <a class="project-link" href="https://github.com/igorpmcj12-crypto" target="_blank" rel="noopener noreferrer" data-pt="Ver perfil ↗" data-en="View profile ↗">Ver perfil ↗</a>
+        </article>
+        <article class="card">
+          <div class="card-icon">⌁</div>
+          <h3 data-pt="Laboratório de redes e segurança" data-en="Networking & security lab">Laboratório de redes e segurança</h3>
+          <p data-pt="Anotações e práticas de estudo sobre redes, sistemas operacionais e conceitos básicos de segurança da informação." data-en="Study notes and hands-on exercises about networking, operating systems, and information security fundamentals.">Anotações e práticas de estudo sobre redes, sistemas operacionais e conceitos básicos de segurança da informação.</p>
+          <div class="tags"><span class="tag">Networking</span><span class="tag">Cybersecurity</span></div>
+          <a class="project-link" href="https://github.com/igorpmcj12-crypto" target="_blank" rel="noopener noreferrer" data-pt="Ver perfil ↗" data-en="View perfil ↗">Ver perfil ↗</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="contato">
+    <div class="wrap">
+      <div class="section-kicker" data-pt="04 / Contato" data-en="04 / Contact">04 / Contato</div>
+      <div class="contactbox">
+        <div>
+          <h2 data-pt="Vamos nos conectar?" data-en="Let's connect?">Vamos nos conectar?</h2>
+          <p class="section-intro" style="margin:0" data-pt="Estou aberto a conversar sobre tecnologia, projetos e oportunidades de aprendizado." data-en="I'm open to talking about technology, projects, and learning opportunities.">Estou aberto a conversar sobre tecnologia, projetos e oportunidades de aprendizado.</p>
+        </div>
+        <a class="button" href="https://github.com/igorpmcj12-crypto" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer><div class="wrap"><span>© <span id="year"></span> Igor Pereira de Medeiros</span><span data-pt="Feito com curiosidade e código." data-en="Built with curiosity and code.">Feito com curiosidade e código.</span></div></footer>
+<script>
+  const langBtn = document.getElementById('langBtn');
+  let language = 'pt';
+  langBtn.addEventListener('click', () => {
+    language = language === 'pt' ? 'en' : 'pt';
+    document.documentElement.lang = language === 'pt' ? 'pt-BR' : 'en';
+    document.querySelectorAll('[data-pt][data-en]').forEach(element => {
+      element.textContent = element.dataset[language];
+    });
+    langBtn.textContent = language === 'pt' ? 'EN ↗' : 'PT ↗';
+  });
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
